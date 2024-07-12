@@ -3,11 +3,16 @@ import { HiMenu } from "react-icons/hi";
 import { IoCloseSharp } from "react-icons/io5";
 import SearchBox from "./SearchBox";
 import Logo from "./Logo";
+import TopHeader from './TopHeader'
 
 function NavBar() {
   const [navOpen, setNavOpen] = useState(true);
-  return (
+  return ( 
+    <>
+  
+  <TopHeader/>
     <nav className="border-b-2 pb-3 pt-5 text-center">
+     
       <div className="m-auto flex w-[80%] justify-between">
         <Logo />
         <button
@@ -28,6 +33,7 @@ function NavBar() {
         <SearchBox />
       </div>
     </nav>
+    </>
   );
 }
 

@@ -6,7 +6,7 @@ export default {
       fontFamily: {
         eczar: ["Eczar", "serif"],
         mont: ["Montserrat", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+        inter: ["Poppins", "sans-serif"],
       },
     },
   },

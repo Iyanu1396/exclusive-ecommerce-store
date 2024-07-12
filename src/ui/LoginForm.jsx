@@ -1,6 +1,6 @@
 function LoginForm() {
   return (
-    <section className="mt-10">
+    <section className="mt-10 mb-20">
       <div className="m-auto w-[80%]">
         <img className="mb-6" src="/img-login.png" alt="" />
         <div className="space-y-2 pb-6 font-inter text-stone-950">
