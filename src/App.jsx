@@ -1,5 +1,6 @@
 import NavBar from './ui/NavBar';
 import TopHeader from './ui/TopHeader'
+import LoginForm from './ui/LoginForm'
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
        <div >
       <TopHeader/>
       <NavBar/>
+      <LoginForm/>
     </div>
 
    
