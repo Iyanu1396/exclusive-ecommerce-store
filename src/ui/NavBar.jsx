@@ -19,7 +19,7 @@ function NavBar() {
       </div>
 
       <div className={`${navOpen ? "hidden" : ""} font-inter`}>
-        <ul className="flex flex-col space-y-3 py-4 font-semibold">
+        <ul className="flex flex-col space-y-3 py-4 font-medium">
           <button className="hover:underline">Home</button>
           <button className="hover:underline">Contact</button>
           <button className="hover:underline">About</button>
