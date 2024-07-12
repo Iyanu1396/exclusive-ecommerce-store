@@ -1,7 +1,8 @@
 function LoginForm() {
   return (
-    <section className="mt-8">
+    <section className="mt-10">
       <div className="m-auto w-[80%]">
+        <img className="mb-6" src="/img-login.png" alt="" />
         <div className="space-y-2 pb-6 font-inter text-stone-950">
           <h1 className="text-2xl font-semibold">Login in to Exclusive</h1>
           <p className="text-sm font-medium">Enter your details below</p>
@@ -19,7 +20,9 @@ function LoginForm() {
             placeholder="Password"
           />
           <div className="flex justify-between font-inter">
-            <button className="rounded-sm bg-red-600 px-6 py-2 text-slate-50">Login</button>
+            <button className="rounded-sm bg-red-600 px-6 py-2 text-slate-50">
+              Login
+            </button>
             <button className="text-red-600">Forget Password</button>
           </div>
         </form>
