@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function SignUpForm() {
   return (
-    <section className="mt-10 mb-20">
+    <section className="pt-[12rem] mb-20">
       <div className="m-auto w-[80%]">
         <img className="mb-6" src="/img-login.png" alt="" />
         <div className="space-y-2 pb-6 font-inter text-stone-950">
@@ -26,11 +26,11 @@ function SignUpForm() {
             placeholder="Password"
           />
 
-          <button className="rounded-sm bg-red-600 px-6 py-2 text-slate-50">
+          <button className="rounded-sm bg-red-600 font-inter px-6 py-2 text-slate-50">
             Create Account
           </button>
         </form>
-        <button className="mb-6 mt-4 flex w-full items-center justify-center gap-2 border-2 px-6 py-2 text-stone-950">
+        <button className="mb-6 mt-4 flex w-full items-center font-inter justify-center gap-2 border-2 px-6 py-2 text-stone-950">
           <img className="w-4" src="/Icon-Google.svg" alt="" /> Sign up with
           Google
         </button>
