@@ -8,31 +8,36 @@ import TopHeader from "./TopHeader";
 function NavBar() {
   const [navOpen, setNavOpen] = useState(true);
   return (
-    <div className="fixed w-full bg-slate-50">
+    <div className="fixed w-full border-b-2 bg-slate-50">
       <TopHeader />
-      <nav
-        className={`border-b-2 pb-3 pt-5 text-center ${!navOpen ? "h-[100vh]" : ""}`}
-      >
-        <div className="m-auto flex w-[80%] justify-between">
-          <Logo />
-          <button
-            className="text-3xl"
-            onClick={() => setNavOpen((isOpen) => !isOpen)}
-          >
-            {navOpen ? <HiMenu /> : <IoCloseSharp />}
-          </button>
-        </div>
 
-        <div className={`${navOpen ? "hidden" : ""} font-inter`}>
-          <ul className="flex flex-col space-y-6 pt-8 font-medium">
-            <button className="hover:underline">Home</button>
-            <button className="hover:underline">Contact</button>
-            <button className="hover:underline">About</button>
-            <button className="hover:underline">SignUp</button>
+      <div className="m-auto w-[80%] md:w-[95%]">
+        <nav
+          className={`pb-3 pt-5 text-center ${!navOpen ? "h-[100vh]" : ""} md:flex md:h-full md:items-center md:justify-around`}
+        >
+          <div className="flex justify-between">
+            <Logo />
+            <button
+              className="text-3xl md:hidden"
+              onClick={() => setNavOpen((isOpen) => !isOpen)}
+            >
+              {navOpen ? <HiMenu /> : <IoCloseSharp />}
+            </button>
+          </div>
+
+          <div className={`${navOpen ? "hidden" : ""} font-inter md:block`}>
+            <ul className="flex flex-col items-center justify-center space-y-6 pt-8 font-medium md:flex-row md:space-x-4 md:space-y-0 md:pt-0">
+              <button className="hover:underline">Home</button>
+              <button className="hover:underline">Contact</button>
+              <button className="hover:underline">About</button>
+              <button className="hover:underline">SignUp</button>
+            </ul>
+          </div>
+          <div className={`${navOpen ? "hidden" : ""} md:flex mt-4 md:mt-0`}>
             <SearchBox />
-          </ul>
-        </div>
-      </nav>
+          </div>
+        </nav>
+      </div>
     </div>
   );
 }

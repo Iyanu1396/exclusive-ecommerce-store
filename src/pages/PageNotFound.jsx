@@ -4,7 +4,7 @@ function PageNotFound() {
 const navigate = useNavigate()
 
   return (
-    <section className="pt-[12rem] pb-[7rem] text-center flex justify-center items-center flex-col text-slate-950">
+    <section className="pt-[12rem]  pb-[7rem] text-center flex justify-center items-center flex-col text-slate-950">
         <div className=" w-[80%]">
            
               <h1 className="font-inter font-semibold text-6xl">404 Not Found</h1>
