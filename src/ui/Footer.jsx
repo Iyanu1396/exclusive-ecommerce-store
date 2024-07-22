@@ -1,29 +1,32 @@
 import { AiOutlineSend } from "react-icons/ai";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { RiTwitterLine } from "react-icons/ri";
 
 function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-100 pt-12 pb-6 font-inter text-[13px]">
-      <div className="m-auto grid w-[80%] grid-cols-2 gap-6">
+    <footer className="mt-auto bg-slate-950 pb-6 pt-12 font-inter text-[13px] text-slate-100 sm:text-sm md:text-base">
+      <div className="m-auto grid w-[80%] grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         <div className="flex flex-col space-y-2">
           <small className="text-lg font-semibold">Exclusive</small>
           <small>Subscribe</small>
           <small>Get 10% off your first order</small>
-          <small className=" flex w-[120px]   items-center border-2  rounded-sm ">
-          <input
-            className="font-mont w-[100px] pl-2  h-8 bg-slate-950  outline-none "
-            placeholder="Enter your email"
-            type="text"
-          />
-          <button>
-          <AiOutlineSend
-           className="text-slate-100" />
-          </button>
-        </small>
+          <small className="flex w-[120px] items-center rounded-sm border-2">
+            <input
+              className="h-8 w-[100px] bg-slate-950 pl-2 font-mont outline-none placeholder:text-[10px] placeholder:font-medium"
+              placeholder="Enter your email"
+              type="text"
+            />
+            <button>
+              <AiOutlineSend className="text-slate-100" />
+            </button>
+          </small>
         </div>
 
         <div className="flex flex-col space-y-2">
           <small className="text-base font-semibold">Support</small>
-          <small>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</small>
+          <small className="lg:w-[80%]">
+            111 Bijoy sarani, Dhaka, DH 1515, <span>Bangladesh.</span>{" "}
+          </small>
           <small>exclusive@gmail.com</small>
           <small>+88015-88888-9999</small>
         </div>
@@ -47,7 +50,12 @@ function Footer() {
           <small className="text-base font-semibold">Download App</small>
           <small>Save $3 with App New User Only</small>
           <div>
-            
+            <div className="mt-2 flex gap-2">
+              <FaFacebookF />
+              <RiTwitterLine />
+              <FaInstagram />
+              <FaLinkedinIn />
+            </div>
           </div>
         </div>
       </div>

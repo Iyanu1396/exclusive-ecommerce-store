@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import NavBar from "./NavBar";
 import Footer from './Footer'
 
-function LoginLayout() {
+function AppLayout() {
   return (
     <>
       <NavBar />
@@ -14,4 +14,4 @@ function LoginLayout() {
   );
 }
 
-export default LoginLayout;
+export default AppLayout;

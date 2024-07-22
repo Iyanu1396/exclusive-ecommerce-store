@@ -1,9 +1,14 @@
 function LoginForm() {
   return (
     <section className="pt-[12rem] mb-20">
-      <div className="m-auto w-[80%]">
-        <img className="mb-6" src="/img-login.png" alt="" />
-        <div className="space-y-2 pb-6 font-inter text-stone-950">
+      <div className="m-auto w-[80%] md:m-0 md:flex items-center gap-20">
+        <div>
+           <img className="mb-6" src="/img-login.png" alt="" />
+        </div>
+       
+
+        <div className="lg:w-[60%]">
+            <div className="space-y-2 pb-6 font-inter text-stone-950">
           <h1 className="text-2xl font-semibold">Login in to Exclusive</h1>
           <p className="text-sm font-medium">Enter your details below</p>
         </div>
@@ -26,6 +31,8 @@ function LoginForm() {
             <button className="text-red-600 font-inter">Forget Password</button>
           </div>
         </form>
+        </div>
+      
       </div>
     </section>
   );

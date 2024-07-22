@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { IoCloseSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import SearchBox from "./SearchBox";
 import Logo from "./Logo";
 import TopHeader from "./TopHeader";
@@ -27,10 +28,10 @@ function NavBar() {
 
           <div className={`${navOpen ? "hidden" : ""} font-inter md:block`}>
             <ul className="flex flex-col items-center justify-center space-y-6 pt-8 font-medium md:flex-row md:space-x-4 md:space-y-0 md:pt-0">
-              <button className="hover:underline">Home</button>
-              <button className="hover:underline">Contact</button>
-              <button className="hover:underline">About</button>
-              <button className="hover:underline">SignUp</button>
+            <Link to='/'> <button className="hover:underline"> Home </button></Link>
+             <Link to='/contact'> <button className="hover:underline">Contact</button></Link>
+             <Link to='about'><button className="hover:underline">About</button></Link> 
+            <Link to='/sign-up'><button className="hover:underline">SignUp</button></Link>  
             </ul>
           </div>
           <div className={`${navOpen ? "hidden" : ""} md:flex mt-4 md:mt-0`}>
