@@ -5,6 +5,7 @@ import AppLayout from "./ui/AppLayout";
 import PageNotFound from "./pages/PageNotFound";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import CheckOut from "./pages/CheckOut";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/checkout" element={<CheckOut />} />
+          
           <Route path="/page-not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate to="/page-not-found" />} />
 

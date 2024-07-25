@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
-import { IoCloseSharp } from "react-icons/io5";
+import { IoCartOutline, IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import SearchBox from "./SearchBox";
 import Logo from "./Logo";
 import TopHeader from "./TopHeader";
+import { FaRegHeart } from "react-icons/fa";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 function NavBar() {
   const [navOpen, setNavOpen] = useState(true);
@@ -55,6 +57,10 @@ function NavBar() {
           </div>
           <div className={`${navOpen ? "hidden" : ""} mt-4 md:mt-0 md:flex`}>
             <SearchBox />
+            <div className="mt-4 flex flex-col items-center gap-4 text-xl md:mt-0 md:flex-row md:pl-2">
+              <FaRegHeart />
+              <MdOutlineShoppingCart />
+            </div>
           </div>
         </nav>
       </div>
