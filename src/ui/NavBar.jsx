@@ -59,7 +59,7 @@ function NavBar() {
             <SearchBox />
             <div className="mt-4 flex flex-col items-center gap-4 text-xl md:mt-0 md:flex-row md:pl-2">
               <FaRegHeart />
-              <MdOutlineShoppingCart />
+            <Link to="/cart"><MdOutlineShoppingCart onClick={handleNavState}/></Link>  
             </div>
           </div>
         </nav>

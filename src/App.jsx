@@ -6,6 +6,7 @@ import PageNotFound from "./pages/PageNotFound";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import CheckOut from "./pages/CheckOut";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/cart" element={<Cart />} />
           
           <Route path="/page-not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate to="/page-not-found" />} />
