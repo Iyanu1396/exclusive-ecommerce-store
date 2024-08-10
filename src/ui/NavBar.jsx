@@ -7,6 +7,7 @@ import Logo from "./Logo";
 import TopHeader from "./TopHeader";
 import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { FiUser } from "react-icons/fi";
 
 function NavBar() {
   const [navOpen, setNavOpen] = useState(true);
@@ -14,7 +15,7 @@ function NavBar() {
   const handleNavState = () => setNavOpen((isOpen) => !isOpen);
 
   return (
-    <div className="fixed w-full border-b-2 bg-slate-50">
+    <div className="fixed z-50 w-full border-b-2 bg-slate-50">
       <TopHeader />
 
       <div className="m-auto w-[80%] md:w-[95%]">
@@ -31,14 +32,11 @@ function NavBar() {
           <div className={`${navOpen ? "hidden" : ""} font-inter md:block`}>
             <ul className="flex flex-col items-center justify-center space-y-6 pt-8 font-medium md:flex-row md:space-x-4 md:space-y-0 md:pt-0">
               <Link to="/">
-                {" "}
                 <button onClick={handleNavState} className="hover:underline">
-                  {" "}
-                  Home{" "}
+                  Home
                 </button>
               </Link>
               <Link to="/contact">
-                {" "}
                 <button onClick={handleNavState} className="hover:underline">
                   Contact
                 </button>
@@ -59,7 +57,12 @@ function NavBar() {
             <SearchBox />
             <div className="mt-4 flex flex-col items-center gap-4 text-xl md:mt-0 md:flex-row md:pl-2">
               <FaRegHeart />
-            <Link to="/cart"><MdOutlineShoppingCart onClick={handleNavState}/></Link>  
+              <Link to="/cart">
+                <MdOutlineShoppingCart onClick={handleNavState} />
+              </Link>
+              <Link to="/account">
+                <FiUser onClick={handleNavState} />
+              </Link>
             </div>
           </div>
         </nav>
