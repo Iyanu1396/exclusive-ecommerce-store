@@ -10,11 +10,11 @@ import CheckOut from "./pages/CheckOut";
 import Cart from "./pages/Cart";
 import Store from "./pages/Store";
 import Account from "./pages/Account";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      // staleTime: 60 * 1000,
       staleTime: 0,
     },
   },
@@ -23,6 +23,7 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false}/>
 
        <BrowserRouter>
       <Routes>

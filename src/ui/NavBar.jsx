@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
-import { IoCartOutline, IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import SearchBox from "./SearchBox";
 import Logo from "./Logo";
@@ -8,6 +7,7 @@ import TopHeader from "./TopHeader";
 import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FiUser } from "react-icons/fi";
+import { IoCloseSharp } from "react-icons/io5";
 
 function NavBar() {
   const [navOpen, setNavOpen] = useState(true);
@@ -46,7 +46,7 @@ function NavBar() {
                   About
                 </button>
               </Link>
-              <Link to="/sign-up">
+              <Link to="/signup">
                 <button onClick={handleNavState} className="hover:underline">
                   SignUp
                 </button>
