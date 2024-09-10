@@ -4,12 +4,12 @@ import { getBestSelling} from "../../services/apiProducts";
 export function useBestSelling() {
   const {
     isLoading,
-    data: flashSales,
+    data: bestSelling,
     error,
   } = useQuery({
     queryKey: ["bestSelling"],
     queryFn: getBestSelling,
   });
 
-  return { isLoading,  flashSales, error };
+  return { isLoading,  bestSelling, error };
 }

@@ -1,39 +1,53 @@
 import Slider from "react-slick";
 import { NextArrowBtn, PrevArrowBtn } from "./CarouselButtons";
+import {
+  IoCameraReverseOutline,
+  IoPhonePortraitOutline,
+} from "react-icons/io5";
+import { FiHeadphones, FiMonitor } from "react-icons/fi";
+import { BsSmartwatch } from "react-icons/bs";
+import { VscGame } from "react-icons/vsc";
 
 function CategoriesCarousel() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    nextArrow: <NextArrowBtn />,
-    prevArrow: <PrevArrowBtn />,
-  };
-
   return (
-    <div>
-      <Slider {...settings}>
-        <div>
-          <span>Phones</span>
+    <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 text-center font-inter text-sm xl:text-base">
+      <div className= " py-6 hover:bg-red-600 hover:text-slate-50 border-2  ">
+        <div className="flex justify-center text-xl mb-3">
+          <IoPhonePortraitOutline />
         </div>
-        <div>
-          <span>Computers</span>
+
+        <span>Phones</span>
+      </div>
+      <div className= " py-6 hover:bg-red-600 hover:text-slate-50 border-2">
+        <div className="flex justify-center text-xl mb-3">
+          <FiMonitor />
         </div>
-        <div>
-          <span>SmartWatch</span>
+        <span>Computers</span>
+      </div>
+      <div className= " py-6 hover:bg-red-600 hover:text-slate-50 border-2">
+        <div className="flex justify-center text-xl mb-3">
+          <BsSmartwatch />
         </div>
-        <div>
-          <span>Camera</span>
+        <span>SmartWatch</span>
+      </div>
+      <div className= " py-6 hover:bg-red-600 hover:text-slate-50 border-2">
+        <div className="flex justify-center text-xl mb-3">
+          <IoCameraReverseOutline />
         </div>
-        <div>
-          <span>HeadPhones</span>
+        <span>Camera</span>
+      </div>
+      <div className= " py-6 hover:bg-red-600 hover:text-slate-50 border-2">
+        <div className="flex justify-center text-xl mb-3">
+          <FiHeadphones />
         </div>
-        <div>
-          <span>Gaming</span>
+        <span>HeadPhones</span>
+      </div>
+      <div className= " py-6 hover:bg-red-600 hover:text-slate-50 border-2">
+        <div className="flex justify-center text-xl mb-3">
+          <VscGame />
         </div>
-      </Slider>
+        <span>Gaming</span>
+      </div>
     </div>
   );
 }

@@ -2,10 +2,12 @@ import { useFlashSales } from "../features/products/useFlashSales";
 import ProductsCarousel from "./ProductsCarousel";
 import SectionTitle from "./SectionTitle";
 import CountdownTimer from "./Timer";
+import ViewProductsBtn from "./ViewProductsBtn";
 
 function FlashSalesSection() {
   const targetDate = Date.now() + 3 * 24 * 60 * 60 * 1000;
   const { flashSales, isLoading } = useFlashSales();
+  const rows = 1
 
   return (
     <section className="mt-14">
@@ -16,10 +18,8 @@ function FlashSalesSection() {
         </h2>
         <CountdownTimer targetDate={targetDate} />
       </div>
-      <ProductsCarousel products={flashSales} isLoading={isLoading}/>
-      <button className="m-auto mt-6 block rounded-sm bg-red-600 px-6 py-2 font-inter text-slate-50">
-        View All Products
-      </button>
+      <ProductsCarousel products={flashSales} isLoading={isLoading} rows={rows}/>
+   <ViewProductsBtn/>
     </section>
   );
 }

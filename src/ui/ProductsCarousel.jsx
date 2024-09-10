@@ -3,12 +3,16 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 import { NextArrowBtn, PrevArrowBtn } from "./CarouselButtons";
+import ProductCard from "./ProductCard";
 
-function ProductsCarousel({ products, isLoading }) {
+function ProductsCarousel({ products, isLoading , rows}) {
+
+
   var settings = {
     dots: false,
     infinite: true,
     speed: 500,
+    rows,
     slidesToShow: 5,
     slidesToScroll: 3,
     initialSlide: 0,
@@ -21,7 +25,6 @@ function ProductsCarousel({ products, isLoading }) {
           slidesToShow: 4,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
         },
       },
       {
@@ -44,14 +47,12 @@ function ProductsCarousel({ products, isLoading }) {
 
   if (isLoading) return <p>loading</p>;
 
+
   return (
     <div className="App">
-      <Slider className="grid grid-cols-1" {...settings}>
+      <Slider {...settings}>
         {products?.map((product) => (
-          <div key={product.id} className="mt-8 px-2 ">
-            <img src={product.images[0]} alt={product.title} />
-            <h3 className="text-sm">{product.title}</h3>
-          </div>
+          <ProductCard product={product} key={product.id}/>
         ))}
       </Slider>
     </div>
