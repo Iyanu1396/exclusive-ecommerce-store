@@ -47,7 +47,7 @@ export async function getOurProducts() {
 
     // // Generates 10 random items from the data
     const chance = new Chance();
-    const products = chance.pickset(data, 8);
+    const products = chance.pickset(data, 13);
 
     return products;
   } catch (err) {
