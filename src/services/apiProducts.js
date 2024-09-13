@@ -36,7 +36,6 @@ export async function getBestSelling() {
   }
 }
 
-
 export async function getOurProducts() {
   try {
     const res = await fetch("https://fakestoreapi.com/products");
@@ -50,6 +49,20 @@ export async function getOurProducts() {
     const products = chance.pickset(data, 13);
 
     return products;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export async function getAllProducts() {
+  try {
+    const res = await fetch("https://fakestoreapi.com/products");
+    const data = await res.json();
+    if (!res.ok) {
+      throw new Error("produtcs could not be loaded");
+    }
+
+    return data;
   } catch (err) {
     console.log(err);
   }

@@ -3,7 +3,6 @@ import BestSellingSection from "../ui/BestSellingSection";
 import CategoriesSection from "../ui/CategoriesSection";
 import FlashSalesSection from "../ui/FlashSalesSection";
 import IphoneBanner from "../ui/IphoneBanner";
-import NewArrivalSection from "../ui/NewArrivalSection";
 import OurProductsSection from "../ui/OurProductsSection";
 
 function Store() {
@@ -14,7 +13,6 @@ function Store() {
       <CategoriesSection />
       <BestSellingSection />
       <OurProductsSection />
-      <NewArrivalSection />
       <BenefitsSection />
     </section>
   );
