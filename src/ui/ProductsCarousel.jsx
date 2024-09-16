@@ -28,9 +28,9 @@ function ProductsCarousel({ products, isLoading , rows}) {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 2,
           initialSlide: 2,
         },
@@ -38,7 +38,7 @@ function ProductsCarousel({ products, isLoading , rows}) {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
