@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { CiHeart } from "react-icons/ci";
-import { GoEye } from "react-icons/go";
+import AddToCartBtn from "../features/cart/AddToCartBtn";
+import AddToWishListBtn from "../features/wishList/AddToWishListBtn";
+import { FiEye } from "react-icons/fi";
 
 function ProductCard({ product }) {
   const [displayCartBtn, setDisplayCartBtn] = useState(false);
+
   return (
     <div
       className="mt-8 px-2 pb-4 font-inter"
@@ -18,20 +20,13 @@ function ProductCard({ product }) {
             alt={product?.title}
           />
           <div className="absolute bottom-0 right-0 top-0 flex flex-col gap-2">
-            <div>
-              <CiHeart />
-            </div>
-            <div>
-              <GoEye />
+            <AddToWishListBtn product={product} />
+            <div className="cursor-pointer">
+              <FiEye />
             </div>
           </div>
         </div>
-        {/* className="rounded-full bg-[#F5F5F5] p-2" */}
-        <div
-          className={`cursor-pointer rounded-b-sm bg-slate-900 py-2 text-center text-xs text-slate-50 sm:text-base ${!displayCartBtn ? "hidden" : "block"}`}
-        >
-          Add To Cart
-        </div>
+        <AddToCartBtn product={product} displayCartBtn={displayCartBtn} />
       </div>
       <h3 className="mb-2 font-mont text-sm font-semibold">{product?.title}</h3>
       <p className="font-mont font-medium text-red-700">${product?.price}</p>
