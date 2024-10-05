@@ -1,7 +1,17 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { updateCartQuantity } from "../products/productsSlice";
 
 function CartDetails() {
   const cart = useSelector((state) => state.products.cart);
+  const dispatch = useDispatch();
+
+  const handleQuantityChange = (id, newQuantity) => {
+    if (newQuantity > 0) {
+      dispatch(updateCartQuantity({ id, quantity: newQuantity }));
+    }
+  };
+
+
   return (
     <>
       {cart.map((product) => (
@@ -16,14 +26,25 @@ function CartDetails() {
           />
           <p>${product.price}</p>
 
-          <input
-            className="m-auto w-[70px] rounded-md border-2 border-zinc-400 py-2 pr-2 text-center font-mont outline-none"
-            type="number"
-            name=""
-            id=""
-          />
+          <div className="flex items-center justify-center">
+            <button
+              className="px-2 py-1 bg-gray-200 rounded-l-md"
+              onClick={() => handleQuantityChange(product.id, product.quantity - 1)}
+            >
+              -
+            </button>
+            <span className="px-4 py-1 bg-white border-t border-b border-gray-300">
+              {product.quantity}
+            </span>
+            <button
+              className="px-2 py-1 bg-gray-200 rounded-r-md"
+              onClick={() => handleQuantityChange(product.id, product.quantity + 1)}
+            >
+              +
+            </button>
+          </div>
 
-          <p>${product.price * product.quantity}</p>
+          <p>${(product.price * product.quantity).toFixed(2)}</p>
         </div>
       ))}
     </>

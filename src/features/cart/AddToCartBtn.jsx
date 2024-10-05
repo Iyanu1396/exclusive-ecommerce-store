@@ -7,7 +7,7 @@ function AddToCartBtn({ product, displayCartBtn }) {
   function handleAddToCart(product) {
     const item = {
       id:product.id,
-      name:product.name,
+      title:product.title,
       price:product.price,
       img:product.image,
       quantity:0
@@ -18,7 +18,7 @@ function AddToCartBtn({ product, displayCartBtn }) {
   function handleRemoveFromCart(product) {
     const item = {
       id:product.id,
-      name:product.name,
+      title:product.title,
       price:product.price,
       img:product.image,
       quantity:0
