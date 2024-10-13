@@ -1,12 +1,13 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { updateCartQuantity } from "../products/productsSlice";
+import { useGetCart } from "../../helpers/useGetCart";
 
 function CartDetails() {
-  const cart = useSelector((state) => state.products.cart);
+  const cart = useGetCart()
   const dispatch = useDispatch();
 
   const handleQuantityChange = (id, newQuantity) => {
-    if (newQuantity > 0) {
+    if (newQuantity > 0 ) {
       dispatch(updateCartQuantity({ id, quantity: newQuantity }));
     }
   };

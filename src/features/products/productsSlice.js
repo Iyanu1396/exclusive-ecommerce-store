@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import toast from "react-hot-toast";
 
 export const productsSlice = createSlice({
   name: "products",
@@ -14,6 +15,8 @@ export const productsSlice = createSlice({
       if (!productExists) {
         state.cart.push(action.payload);
       }
+
+      toast.success("item added to cart")
     },
     updateCartQuantity: (state, action) => {
       const { id, quantity } = action.payload;
@@ -24,6 +27,7 @@ export const productsSlice = createSlice({
     },
     removeFromCart: (state, action) => {
       state.cart = state.cart.filter((item) => item.id !== action.payload.id);
+      toast.success("item removed from cart")
     },
     addToWishList: (state, action) => {
       const productExists = state.wishList.find(
