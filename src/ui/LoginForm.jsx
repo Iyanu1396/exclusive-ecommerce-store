@@ -5,20 +5,23 @@ function LoginForm() {
   const [email, setEmail] = useState("fakeuser@gmail.com");
   const [password, setPassword] = useState("iyanzy");
   const { login, isLoading } = useLogin();
+ 
 
   function handleSubmit(e) {
-    e.preventDefault()
-    if(!email || !password) return
-    
-    
-    login({email , password} , {
-      onSettled:()=>{
-        setEmail('')
-        setPassword('')
-      }
-    })
-    
-      }
+
+    e.preventDefault();
+    if (!email || !password) return;
+
+    login(
+      { email, password },
+      {
+        onSettled: () => {
+          setEmail("");
+          setPassword("");
+        },
+      },
+    );
+  }
 
   return (
     <section className="mb-20 pt-[12rem]">
@@ -55,10 +58,16 @@ function LoginForm() {
               placeholder="Password"
             />
             <div className="flex justify-between font-inter">
-              <button className="rounded-sm bg-red-600 px-6 py-2 font-inter text-slate-50">
+              <button
+                className={`rounded-sm bg-red-600 px-6 py-2 font-inter text-slate-50 ${isLoading ? "cursor-not-allowed" : ""}`}
+                disabled={isLoading}
+              >
                 Login
               </button>
-              <button className="font-inter text-red-600" disabled={isLoading}>
+              <button
+                className={`font-inter text-red-600`}
+                disabled={isLoading}
+              >
                 Forget Password
               </button>
             </div>
