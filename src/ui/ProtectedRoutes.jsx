@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useUser } from "../features/authentication/useUser";
 import { useNavigate } from "react-router-dom";
+import Spinner from "./Spinner";
 
 function ProtectedRoute({ children }) {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ function ProtectedRoute({ children }) {
   }, [isAuthenticated, isLoading, navigate]);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <Spinner/>
   }
 
   return children

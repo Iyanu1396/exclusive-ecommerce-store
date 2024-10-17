@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ApplyCoupon from "../../ui/ApplyCoupon";
 import { useSelector } from "react-redux";
 
@@ -71,10 +72,13 @@ function CheckOutDetails() {
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <ApplyCoupon />
-
-          <button className="block rounded-sm bg-red-600 px-6 py-3 font-inter text-slate-50">
-            Place Order
-          </button>
+          <Link to="/order-received">
+          <button className="block rounded-sm bg-red-600 px-6 py-3 font-inter text-slate-50 w-full">
+           
+             Place Order
+        
+           
+          </button>    </Link>
         </div>
       </div>
     </section>

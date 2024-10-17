@@ -12,8 +12,10 @@ export function useLogin() {
     mutationFn: ({ email, password }) => Login({ email, password }),
     onSuccess: async () => {
       await refetch();  
-      navigate("/", { replace: true }); // Redirect on success
+      navigate("/", { replace: true }); 
+      toast.success("Successfully logged in")
     },
+  
     onError: () => {
       toast.error("Provided email or password are incorrect");
     },

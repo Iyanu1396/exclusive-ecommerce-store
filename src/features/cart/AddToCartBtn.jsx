@@ -10,7 +10,7 @@ function AddToCartBtn({ product, displayCartBtn }) {
       title:product.title,
       price:product.price,
       img:product.image,
-      quantity:0
+      quantity:1
       
     }
     dispatch(addToCart(item));

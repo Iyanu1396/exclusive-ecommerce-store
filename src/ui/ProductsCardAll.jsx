@@ -2,16 +2,19 @@ import { useState } from "react";
 import AddToCartBtn from "../features/cart/AddToCartBtn";
 import AddToWishListBtn from "../features/wishList/AddToWishListBtn";
 import { FiEye } from "react-icons/fi";
+import Spinner from "./Spinner";
 
-function ProductsCardAll({ product }) {
+function ProductsCardAll({ product , isLoading }) {
   const [displayCartBtn, setDisplayCartBtn] = useState(false);
+
+  if (isLoading) return <Spinner/>
 
   return (
     <div
       onMouseEnter={() => setDisplayCartBtn(true)}
       onMouseLeave={() => setDisplayCartBtn(false)}
     >
-      <div key={product.id} className="mt-8 px-2 pb-4 font-inter">
+      <div key={product?.id} className="mt-8 px-2 pb-4 font-inter">
         <div>
           <div className="relative">
             <img

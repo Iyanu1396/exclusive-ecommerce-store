@@ -14,6 +14,8 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Products from "./pages/Products";
 import { Toaster } from "react-hot-toast";
 import ProtectedRoute from "./ui/ProtectedRoutes";
+import OrderReceived from "./pages/OrderReceived";
+import ScrollToTop from "./ui/ScrollToTop";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -51,12 +53,16 @@ function App() {
             <Route path="/checkout" element={<CheckOut />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/account" element={<Account />} />
+            <Route path="/order-received" element={<OrderReceived />} />
           </Route>
 
           {/* Page not found */}
           <Route path="/page-not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate to="/page-not-found" />} />
         </Routes>
+
+
+        <ScrollToTop/>
       </BrowserRouter>
 
       <Toaster

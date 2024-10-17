@@ -4,6 +4,7 @@ import Slider from "react-slick";
 
 import { NextArrowBtn, PrevArrowBtn } from "./CarouselButtons";
 import ProductCard from "./ProductCard";
+import Spinner from "./Spinner";
 
 function ProductsCarousel({ products, isLoading , rows}) {
 
@@ -45,7 +46,7 @@ function ProductsCarousel({ products, isLoading , rows}) {
     ],
   };
 
-  if (isLoading) return <p>loading</p>;
+  if (isLoading) return <Spinner/>
 
 
   return (

@@ -1,4 +1,8 @@
+import { useUser } from "../authentication/useUser";
+
 function AccountForm() {
+
+  
   return (
     <form className="mt-8 flex flex-col gap-4 bg-slate-50 px-6 py-7 rounded-sm shadow-xl sm:mt-0">
       <div className="sm:grid sm:grid-cols-2 sm:gap-4">
@@ -7,7 +11,7 @@ function AccountForm() {
           <input
             className="bg-[#F5F5F5] py-2 pl-2 font-mont font-medium outline-none placeholder:font-mont"
             autoCapitalize="first name"
-            placeholder="Iyanuoluwa"
+            placeholder="John"
             id="firstName"
             type="text"
           />
@@ -18,7 +22,7 @@ function AccountForm() {
           <input
             className="bg-[#F5F5F5] py-2 pl-2 font-mont font-medium outline-none placeholder:font-mont"
             autoComplete="last name"
-            placeholder="Atijosan"
+            placeholder="Doe"
             id="lastName"
             type="text"
           />
@@ -31,7 +35,7 @@ function AccountForm() {
           <input
             className="bg-[#F5F5F5] py-2 pl-2 font-mont font-medium outline-none placeholder:font-mont"
             autoComplete="email"
-            placeholder="iyanu1396@gmail.com"
+            placeholder="fakeUser@gmail.com"
             id="email"
             type="email"
           />
